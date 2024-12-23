@@ -1,0 +1,282 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap');
+
+body {
+  font-family: 'Comfortaa', sans-serif;
+  background-color: #f4f7fa; /* Light background for the whole page */
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+}
+
+/* Calendar Container */
+.calendar-app {
+  width: 90%;
+  max-width: 900px;
+  margin: 50px auto;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+.heading {
+  text-align: center;
+  font-size: 36px;
+  color: #444;
+  margin-bottom: 30px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Navigation (Month & Year) */
+.navigate-date {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.month,
+.year {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.buttons button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.buttons button:hover {
+  background-color: #0056b3;
+}
+
+/* Weekdays */
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.weekdays span {
+  font-weight: bold;
+  color: #666;
+}
+
+/* Days Grid */
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  text-align: center;
+}
+
+.days span {
+  display: block;
+  padding: 12px;
+  background-color: #f5368c;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.days span:hover {
+  background-color: #007bff;
+  color: rgb(255, 255, 255);
+  transform: translateY(-3px);
+}
+
+.highlight {
+  background-color: #ffbf47; /* Yellow highlight for today's date */
+  color: #fff;
+  border-radius: 50%;
+  padding: 8px;
+}
+
+/* Event Popup */
+.event-popup {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.event-popup label {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.event-popup input {
+  padding: 8px;
+  margin-right: 5px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  width: 60px;
+}
+
+.event-popup textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  font-size: 14px;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+.event-popup textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.event-popup button {
+  background-color: #04264b;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 16px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.event-popup button:hover {
+  background-color: #0056b3;
+}
+
+/* Close Button */
+.event-popup button:last-child {
+  background-color: #ff0000;
+}
+
+.event-popup button:last-child:hover {
+  background-color: #cc0000;
+}
+
+/* Close Button */
+.event-popup button:last-child {
+  background-color: #710303;
+}
+
+.event-popup button:last-child:hover {
+  background-color: #032102;
+}
+
+/* Event List */
+.event {
+  background-color: #fff;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.event-date-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.event-date,
+.event-time {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.event-text {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #555;
+}
+
+.event-buttons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.event-buttons i {
+  cursor: pointer;
+  font-size: 18px;
+  color: #007bff;
+}
+
+.event-buttons i:hover {
+  color: #0056b3;
+}
+
+
+/* Event Buttons */
+.event-buttons {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px; /* Space between buttons */
+  justify-content: flex-end; /* Align buttons to the right */
+}
+
+/* Edit Button */
+.event-buttons i.bxs-edit-alt {
+  cursor: pointer;
+  font-size: 20px;
+  color: #28a745; /* Green color for edit */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.event-buttons i.bxs-edit-alt:hover {
+  color: #1e7e34; /* Darker green on hover */
+  transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* Cancel Button */
+.event-buttons i.bxs-message-alt-x {
+  cursor: pointer;
+  font-size: 20px;
+  color: #dc3545; /* Red color for cancel */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.event-buttons i.bxs-message-alt-x:hover {
+  color: #c82333; /* Darker red on hover */
+  transform: scale(1.1); /* Slight zoom effect */
+}
+/* Navigation Buttons Container */
+.buttons {
+  display: flex;
+  justify-content: space-between; /* Space them apart horizontally */
+  gap: 20px; /* Add spacing between the buttons */
+  align-items: center; /* Ensure vertical alignment */
+}
+
+/* Individual Buttons */
+.buttons button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.buttons button:hover {
+  background-color: #6d7be3;
+}  
